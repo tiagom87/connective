@@ -1,0 +1,62 @@
+<!-- body-content -->
+      <div class="body-content clearfix" >
+
+        <div class="block-section bg-color4">
+
+          <div class="container">
+
+  <div class="text-center logo"> <a href="index.html"><%= image_tag "logo.png" %></a></div>
+  <br>
+            <div class="panel panel-md">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+             
+                    <!-- form login -->
+                    
+                    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <%= devise_error_messages! %>
+                    <div class="form-group">
+                    <%= f.input :name, input_html: {class: "form-control"}, placeholder: "Your Name", required: true %>
+                      </div>
+                      <div class="form-group">
+                      <%= f.input :email, input_html: {class: "form-control"}, placeholder: "Your Email", required: true %>
+                      </div>
+                      <div class="form-group">
+                      <%= f.input :password, input_html: {class: "form-control"}, placeholder: "Password", required: false %>
+                      </div>
+                      <div class="white-space-10"></div>
+                      <div class="form-group no-margin">
+                      <%= f.submit "Signup", class: "btn btn-theme btn-lg btn-t-primary btn-block" %>
+                      </div>
+                    <% end %>
+                    <br>
+                    <div class="text-center">
+                    <%= render "devise/shared/links" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="white-space-20"></div>
+            <div class="text-center color-white">By creating an account, you agree to Connective <br/><a href="#" class="link-white"><strong>Terms of Service</strong></a> and consent to our <a href="#" class="link-white"><strong>Privacy Policy</strong></a>.</div>
+          </div>
+        </div>
+
+        <div class="block-section bg-color2">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <i class="fa fa-question fa-5x box-icon"></i>
+                <h2 class=""> Why create an account?</h2>
+                <hr/>
+                <p><i class="fa fa-check"></i> Manage, create and delete your job alerts</p>
+                <p><i class="fa fa-check"></i> Access your saved jobs and notes from any computer</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!--end body-content -->

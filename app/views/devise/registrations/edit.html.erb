@@ -1,0 +1,130 @@
+ <div class="wrapper">
+ <div class="body-content clearfix">
+
+        <div class="bg-color2">
+          <div class="container">
+            <div class="col-md-3 col-sm-3">
+
+              <div class="block-section text-center ">
+              <%= image_tag "profile.jpg", class: "img-rounded", class: "profile_pic" %>
+                <div class="white-space-20"></div>
+                <h4><%= current_user.name %></h4>
+                <div class="white-space-20"></div>
+                <ul class="list-unstyled" role="tablist">
+                  <li><a href="#personal" aria-controls="home" role="tab" data-toggle="tab"> Personal </a></li>
+                  <li><a href="#experience" aria-controls="home" role="tab" data-toggle="tab"> Experience </a></li>
+                  <li><a href="#password" aria-controls="home" role="tab" data-toggle="tab"> Change Password</a></li>
+
+                </ul>
+                
+             
+              </div>    </div>
+            <div class="col-md-9 col-sm-9">
+              <!-- Block side right -->
+              <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                <%= devise_error_messages! %>
+               <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="personal">
+                    <div class="block-section box-side-account">
+                <h3 class="no-margin-top">Change Profile</h3>
+                <hr>
+                <div class="row">
+                  <div class="col-md-7">
+                      <div class="form-group">
+                        <%= f.input :name, required: true, placeholder: "Name", input_html: {class: "form-control"} %>
+                      </div>
+                      <div class="form-group">
+                        <%= f.input :email, required: true, placeholder: "Email", input_html: {class: "form-control"} %>
+                      </div>
+                      <div class="form-group">
+                        <%= f.input :country, required: false, placeholder: "Country", input_html: {class: "form-control"} %>
+                      </div>
+                      <div class="form-group">
+                        <button type="button" class="btn btn-line dark btn-theme btn-lg" data-toggle="modal" data-target="#confirm_change">
+                    Update
+                  </button>
+                      </div>
+                  </div>
+                </div>
+              </div><!-- end Block side right -->
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="experience">
+                    <div class="block-section box-side-account">
+                <h3 class="no-margin-top">Change Experience</h3>
+                <hr>
+                <div class="row">
+                  <div class="col-md-7">
+                      <div class="form-group">
+                        <%= f.input :mini_bio, required: false, placeholder: "Mini Bio", input_html: {class: "form-control"} %>
+                      </div>
+                      <div class="form-group">
+                        <%= f.input :latest_position, required: false, placeholder: "Latest Position", input_html: {class: "form-control"} %>
+                      </div>
+                       <div class="form-group">
+                        <%= f.input :university, required: false, placeholder: "University", input_html: {class: "form-control"} %>
+                      </div>
+                       <div class="form-group">
+                       <label>Experience</label>
+                        <%= f.input :experience, required: false, label: false %>
+                      </div>
+                      
+                      <div class="form-group">
+                        <button type="button" class="btn btn-line dark btn-theme btn-lg" data-toggle="modal" data-target="#confirm_change">
+                    Update
+                  </button>
+                      </div>
+                  </div>
+                </div>
+              </div><!-- end Block side right -->
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="password">
+                    <div class="block-section box-side-account">
+                <h3 class="no-margin-top">Change Password</h3>
+                <hr>
+                <div class="row">
+                  <div class="col-md-7">
+                      <div class="form-group">
+                        <%= f.input :password, placeholder: "New Password", input_html: {class: "form-control"}, required: false %>
+                      </div>
+                      <div class="form-group">
+                      <button type="button" class="btn btn-line dark btn-theme btn-lg" data-toggle="modal" data-target="#confirm_change">
+                    Update
+                  </button>
+                      </div>
+                      <h3>Cancel my account</h3>
+
+
+                  </div>
+                </div>
+              </div><!-- end Block side right -->
+                  </div>
+              </div>
+              <div class="modal fade" id="confirm_change" aria-hidden="true" style="display: none;">
+                  <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>×</span></button>
+                        <h4 class="modal-title" id="myModal4Label">Confirm</h4>
+                      </div>
+                      <div class="modal-body">
+                        <%= f.input :current_password, placeholder: "Current Password", input_html: {class: "form-control"}, required: true, label: false %>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-theme btn-default" data-dismiss="modal">Close</button>
+                        <%= f.submit "Confirm", class: "btn btn-theme btn-success" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>        
+      </div>
+ </div>
+  <script>
+      $(function() {
+          $('#user_experience').editable({inlineMode: false})
+      });
+  </script>
+

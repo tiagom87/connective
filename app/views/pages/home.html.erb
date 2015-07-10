@@ -1,0 +1,115 @@
+
+   <header class="main-header">
+        <!-- mobile navbar -->
+        <div class="container">
+          <nav class="mobile-nav hidden-md hidden-lg">
+            <a href="#" class="btn-nav-toogle first">
+              <span class="bars"></span>
+              Menu
+            </a>
+            <div class="mobile-nav-block">
+              <h4>Navigation</h4>
+              <a href="#" class="btn-nav-toogle">
+                <span class="barsclose"></span>
+                Close
+              </a>      
+
+              <ul class="nav navbar-nav">
+                <li class=""><a href="job_list.html"><strong>Find a Job</strong></a></li>
+                <li class=""><a href="resume_list.html"><strong>Find Resumes</strong></a></li>
+                <li  class=""><a href="job_post_1.html"><strong>Post a Job</strong></a></li>
+                <li><a href="login.html"><strong>Login</strong></a></li>
+                <li><a href="register.html"><strong>Register</strong></a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Pages <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog.html">Articles &amp; Blog</a></li>
+                    <li><a href="terms_privacy.html">Terms &amp; Privacy</a></li>
+                    <li><a href="error_404.html">Error 404</a></li>
+                    <li><a href="shortcode.html">Short Code</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Features <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="job_list.html">Find a Job</a></li>
+                    <li><a href="job_details.html">Job Details</a></li>
+                    <li><a href="resume_list.html">Find Resumes</a></li>
+                    <li><a href="resume_details.html">Resume Details</a></li>
+                    <li><a href="job_post_2.html">Post a Job</a></li>
+                    <li><a href="company_page.html">Company Profile</a></li>
+                  </ul>
+                </li>
+              </ul>    
+            </div>
+          </nav>
+        </div><!-- mobile navbar -->
+
+        <div class="hero-header">
+          <div class="inner-hero-header">
+            <div class="container">
+              <div class="text-center logo"> <%= link_to root_path do %><%= image_tag "logo.png" %><% end %></div>
+              <div class="relative">
+                <!-- form search -->
+                <form class="form-search-home" method="post" action="job_list.html">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Who</label>
+                        <input class="form-control  input-lg" placeholder="job title, keywords or hotel name">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>What</label>
+                        <input class="form-control input-lg" placeholder="category, skill">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-t-primary btn-lg btn-theme btn-pill btn-block">Find Advice</button>
+                  </div>
+                  <div class="text-center">
+                    <a href="#modal-advanced" data-toggle="modal">or Signup Now</a>
+                  </div>
+                </form> <!-- end form search -->
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </header><!-- end main-header -->
+
+      <!-- main-header -->
+   
+
+      <!-- body-content -->
+      <div class="body-content clearfix" >
+
+        <!-- box simple static -->
+        <div class="block-section bg-color1">
+          <div class="container">
+            <div class="row text-center">
+              <div class="col-md-4">
+                <h3 class="font-2x ">203,285</h3>
+                <h4 class="color-text">Students</h4>
+              </div>
+              <div class="col-md-4">
+                <h3 class="font-2x ">3,603,945</h3>
+                <h4 class="color-text">Calls Happened</h4>
+              </div>
+              <div class="col-md-4">
+                <h3 class="font-2x ">53,945</h3>
+                <h4 class="color-text">Mentors</h4>
+              </div>
+            </div>
+          </div>
+        </div><!-- end box simple static -->
+
+      </div><!--end body-content -->
